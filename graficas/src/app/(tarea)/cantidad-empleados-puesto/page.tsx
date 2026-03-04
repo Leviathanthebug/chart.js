@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { cantidadEmpleadosPorMesPuesto } from '@/services/api';  
+import { cantidadEmpleadosPorPuesto } from '@/services/api';  
 import { Line } from 'react-chartjs-2';
 
 import {
@@ -40,7 +40,7 @@ export default function page() {
  });
 
  useEffect(() => {
-    cantidadEmpleadosPorMesPuesto().then((data) => {
+    cantidadEmpleadosPorPuesto().then((data) => {
         const labels = data.map((item: any) => item.department_id);
         const countData = data.map((item: any) => item.cant_puesto_trabajo);
 

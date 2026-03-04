@@ -26,8 +26,6 @@ export default function page() {
     useEffect(() => {
         cantidadEmpleadosPorMes().then((data) => {
 
-            console.log(data);
-
             const departamentos = data.map((item: any) => item.mes_numero);
             const puestoTrabajo = data.map((item: any) => item.total_empleados);
 
@@ -36,7 +34,7 @@ export default function page() {
                 labels: departamentos,
                 datasets: [
                     {
-                        label: 'Suma de salarios por departamento',
+                        label: 'Cantidad de empleados por mes',
                         data: puestoTrabajo,
                     }
                 ]

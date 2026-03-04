@@ -13,7 +13,7 @@ export const promedioSalarioPorDepartamento = async () => {
     return response.data;
 }
 
-export const cantidadEmpleadosPorMesPuesto = async () => {
+export const cantidadEmpleadosPorPuesto = async () => {
     const response = await axios.get(`${API_URL}/cantidad-empleado-depto`);
     return response.data;
 }   
